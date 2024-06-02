@@ -1,0 +1,311 @@
+/* Estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+}
+
+/* Estilo del encabezado */
+.div-titulo {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Estilo del formulario */
+.div-formulario {
+    width: 30%;
+    margin: 30px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.div-formulario h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.div-formulario label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.div-formulario input[type="text"],
+.div-formulario select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.div-formulario button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Estilo de la lista de clientes */
+.div-listado {
+    width: 60%;
+    margin: 30px auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.div-listado h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.div-listado .cliente-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.div-listado .cliente-item span {
+    font-weight: bold;
+}
+
+.div-listado .cliente-item button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    color: #007bff;
+}
+
+.div-listado .cliente-item button:hover {
+    text-decoration: underline;
+}
+
+
+#form-ingresar-cliente button{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+hr {
+    width: 100%;
+    height: 1px;
+}
+
+/* Estilos para el contenedor de los clientes y botones */
+.cliente-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cliente-container .botones-container {
+    display: flex;
+}
+
+.cliente-container .botones-container button {
+    margin-left: 10px; /* Espacio entre los botones */
+}
+
+button {
+    padding: 4px 10px;
+    border: none;
+    margin: 0 5px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.cliente-item {
+    display: flex; /* Usar flexbox para el diseño */
+    align-items: center; /* Alinear los elementos verticalmente */
+    justify-content: space-between; /* Espacio uniforme entre los elementos */
+    margin-bottom: 10px; /* Agregar espacio entre los elementos */
+}
+
+/* Estilos para el botón de editar */
+button.Editar {
+    background-color: green;
+    color: white;
+    /* Agregar color de texto para que sea visible sobre el fondo verde */
+}
+
+/* Estilos para el botón de eliminar */
+button.Eliminar {
+    background-color: red;
+    color: white;
+    /* Agregar color de texto para que sea visible sobre el fondo rojo */
+}
+
+.cliente-item span {
+    margin-right: 20px;
+    /* Agregar margen a la derecha de los datos */
+}
+
+/* Estilos para el contenedor de los botones */
+.botones-container button {
+    width: 80px; /* Ancho fijo para los botones */
+    padding: 4px 10px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* Estilos para el botón de editar */
+.botones-container button.Editar {
+    background-color: green;
+    color: white;
+    margin-right: 10px; /* Agregar margen a la derecha para separar los botones */
+}
+
+/* Estilos para el botón de eliminar */
+.botones-container button.Eliminar {
+    background-color: red;
+    color: white;
+}
+
+.cliente-item button {
+    width: 80px; /* Ancho fijo para los botones */
+    padding: 4px 10px;
+    border: none;
+    margin: 0 5px;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    /* Por defecto, el modal está oculto */
+    position: fixed;
+    /* Fijar posición en la ventana del navegador */
+    z-index: 1;
+    /* Ubicar el modal por encima del contenido */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Ancho completo */
+    height: 100%;
+    /* Altura completa */
+    overflow: auto;
+    /* Habilitar el desplazamiento si el contenido es demasiado largo */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Fondo oscuro semi-transparente */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    /* Centrar vertical y horizontalmente */
+    padding: 23px;
+    border: 1px solid #888;
+    width: 400px; /* Ancho fijo */
+    /* Ancho del contenido */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    height: auto; /* Altura automática */
+    max-height: 80%; /* Altura máxima */
+    overflow-y: auto; /* Agregar desplazamiento vertical si es necesario */
+}
+
+/* Botón para cerrar el modal */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 32px; /* Tamaño de fuente más grande */
+    font-weight: bold;
+    margin-right: 10px; /* Espacio entre la "x" y el borde derecho */
+    cursor: pointer; /* Cambiar el cursor a puntero */
+}
+
+/* Estilos para el formulario de edición */
+#form-editar-cliente {
+    text-align: center;
+    /* Alinear elementos en el centro */
+}
+
+.edit-input {
+    width: calc(100% - 20px);
+    /* Ancho completo menos el espacio para los bordes */
+    padding: 10px;
+    margin: 5px 0;
+    /* Espaciado entre los campos */
+    box-sizing: border-box;
+    /* Incluir el padding y el borde en el ancho total */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    border: 1px solid #ccc;
+    /* Borde gris */
+    display: inline-block;
+    /* Mostrar en línea */
+}
+
+/* Estilo para el botón de guardar cambios */
+.save-button {
+    background-color: #4CAF50;
+    /* Color de fondo verde */
+    color: white;
+    /* Color del texto blanco */
+    padding: 10px 20px;
+    /* Espaciado interno */
+    border: none;
+    /* Sin borde */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cursor apuntando */
+    margin-top: 10px;
+    /* Espaciado superior */
+}
+
+.save-button:hover {
+    background-color: #041205;
+    /* Cambio de color al pasar el ratón */
+}
+
+/* Estilos para el botón "Atrás" */
+button {
+    margin-top: 3px; /* Espacio superior */
+    padding: 12px 23px; /* Espaciado interno */
+    background-color: #007bff; /* Color de fondo del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor apuntando */
+}
+
+button:hover {
+    background-color: #0056b3; /* Cambio de color al pasar el ratón */
+}
